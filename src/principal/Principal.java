@@ -2,6 +2,7 @@ package src.principal;
 
 import java.util.Scanner;
 import src.usuarios.VectorJugadores;
+import src.tablero.Tablero;
 
 public class Principal {
 
@@ -10,13 +11,13 @@ public class Principal {
     }
     
     private VectorJugadores tablaJugadores = new VectorJugadores();
+    private Tablero tablero1 = new Tablero(8,8);
 
     public Principal(){
         Scanner leer = new Scanner(System.in);
 
         boolean salir = false;
         boolean regresar1 = false;
-        boolean regresar2 = false;
         boolean regresar3 = false;
 
         int opcion; // se guarda la opcion del gamePlayer
@@ -68,6 +69,7 @@ public class Principal {
                                                          
                                     switch (opcion) {
                                         case 1:
+                                            tablero1.pintarTablero();
                                             break;
                                         case 2:
                                             break;
